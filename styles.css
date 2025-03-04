@@ -1,0 +1,208 @@
+/* Styles généraux du corps de la page */
+body {
+    font-family: Arial, sans-serif; /* Police principale */
+    background: linear-gradient(to right, #3498db, #f1c40f); /* Dégradé de fond */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Couleur du texte principal */
+}
+
+/* En-tête */
+header {
+    background: #2980b9; /* Fond bleu */
+    color: white; /* Texte en blanc */
+    padding: 15px 0;
+    text-align: center; /* Centrer le texte */
+}
+
+/* Navigation */
+nav ul {
+    list-style: none; /* Supprime les puces */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Affichage en ligne */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Supprime le soulignement */
+    font-weight: bold;
+}
+
+/* Contenu principal */
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Titres */
+h2 {
+    color: #2980b9; /* Bleu */
+}
+
+/* Boutons */
+button {
+    background: #f1c40f; /* Jaune */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Effet au survol des boutons */
+button:hover {
+    background: #d4ac0d; /* Jaune plus foncé */
+}
+
+/* Pied de page */
+footer {
+    background: #2980b9; /* Bleu */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed; /* Fixe le pied de page en bas */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Défilement des noms de villes */
+#city-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    padding: 20px 0;
+    margin-top: 20px;
+    background-color: #003366; /* Bleu foncé */
+    color: white;
+    font-size: 18px;
+    justify-content: start;
+}
+
+/* Style des noms de villes en défilement */
+#city-list span {
+    margin-right: 50px;
+    animation: scrollCities 15s linear infinite;
+}
+
+/* Stylisation du bandeau contenant le logo et la navigation */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, white, #f1c40f);
+    color: black;
+    padding: 10px 20px;
+}
+
+/* Conteneur du logo */
+.logo-container {
+    flex-shrink: 0; /* Empêche le logo de se réduire */
+}
+
+/* Taille du logo */
+.site-logo {
+    width: 85px;
+    height: auto;
+}
+
+/* Nom du site */
+.site-name {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    flex-grow: 1; /* Prend l'espace disponible */
+    text-align: center;
+}
+
+/* Barre de navigation */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espacement entre les onglets */
+    margin: 0;
+    padding: 0;
+}
+
+/* Liens de la navigation */
+.navbar a {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 5px 10px;
+}
+
+/* Effet au survol des liens */
+.navbar a:hover {
+    background-color: #f1c40f; /* Jaune */
+    border-radius: 5px;
+}
+
+/* Style de l'horloge */
+.clock {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 50px; /* Espacement entre l'horloge et la navigation */
+    color: black;
+}
+
+/* Animation du défilement des villes */
+@keyframes scrollCities {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Section des caméras en direct */
+.live-cams {
+    text-align: center;
+    margin: 40px auto;
+}
+
+/* Conteneur des caméras */
+.cams-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Conteneur des vidéos */
+#live-cams {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacement entre les vidéos */
+}
+
+/* Style des vidéos */
+.cam-item {
+    text-align: center;
+    width: 400px; /* Taille du lecteur */
+}
+
+/* Iframes des vidéos */
+.cam-item iframe {
+    width: 100%;
+    height: 225px;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
+}
+
+/* Nom de l'endroit sous chaque caméra */
+.cam-item p {
+    font-weight: bold;
+    margin-top: 5px;
+}

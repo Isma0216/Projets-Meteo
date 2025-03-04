@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Météo dans le Monde</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo du site" class="site-logo">
+        </div>
+        <h1 class="site-name">Mais-T-Au</h1> 
+
+        <div id="clock" class="clock"></div>
+
+    
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="meteo_monde.html">Météo dans le Monde</a></li>
+                    <li><a href="donnees_altitude.html">Données en Altitude</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="city-scroller">
+            <h2>Températures des grandes villes</h2>
+            <div class="city-list" id="city-list"></div>
+        </section>
+
+        <section class="live-cams">
+            <h2>🎥 Caméras en direct</h2>
+            <div class="cams-container" id="live-cams"></div>
+        </section>
+        
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Site Météo. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
